@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Product</title>
+    <link rel="stylesheet" href="Assets/styl.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;1,500;1,700&family=DM+Sans:wght@400;700&family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&family=Roboto+Slab:wght@400;500;600;700&family=Tilt+Neon&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,300;0,400;0,500;0,600;1,500;1,700&family=Crimson+Text:ital,wght@0,400;0,600;1,400;1,600&family=DM+Sans:wght@400;700&family=Montserrat:wght@300;400;700&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,800&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,100&family=Roboto+Slab:wght@400;500;600;700&family=Tilt+Neon&family=Ubuntu:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+     <!--Header-->
+     <header class="header">
+       <div class="nav">
+          <div class="logotype"><a href="">Daniyal</a></div> <!--BREND--->
+        
+          <div class="nav_wrapper">
+              <div class="nav_bars">
+                  
+                  
+                 <div class="show">
+                    <ul class="menus">
+                        <img src="Assets/close.png" alt="" width="35px" height="30px" class="closeApp" onclick="closemenu()">
+                       <li class="home">Home</li>  <!---HOME PAGE--->
+                       <li class="shop">Shops</li> <!---SHOPS PAGE--->
+                       <li class="about">About</li> <!--ABOUT PAGE-->
+                       <li class="contact">Contact</li> <!--CONTACT PAGE-->
+                        <!---MENU CLOSE ICON--->
+                    </ul>
+                 </div>
+              </div>
+                <!--MENU ICON--->
+              <img src="Assets/menu.png" alt="" width="35px" height="30px" class="iconApp" onclick="openmenu()">
+                 <div class="shopping_box"> <!---SHOPING BAG-->
+                   <img src="Assets/shopping-bag.png" alt="" width="35px" height="30px" class="iconCart">
+                   <span>0</span>
+                 </div>
+         </div>
+      </div>
+    </header>
+
+    <!--CART IN SHOPING BAG--->
+    <section class="cartTab">
+       <h1>Shopping Cart</h1>
+       <div class="listCart"></div>
+       <div class="listButton">
+           <button class="close">CLOSE</button> <!--CLOSE BUTTON-->
+           <button close="chekOut">CHECKOUT</button> <!---CHECK OUT--->
+       </div> 
+    </section>
+
+  <!--HOME PAGE-->
+  <section class="page-1">
+    <section class="main">
+        <div class="main_wrapper">
+          <div class="lefts"><!--LEFT PART HOME PAGE---->
+             <div class="left_container">
+                <p>LATEST ARTICLE</p> <!--LEFT PART TITLE--->
+                <h2>The 10 Bestselling North American Whiskey Brands</h2> 
+                <p>In preparation for Thanksgiving, we rundown the biggest North American Whiskey brands and recommed a bottle from each.</p> <!--LEFT PART DESCRIPTION--->
+                <a class="btn" href="https://www.apetogentleman.com/best-north-american-whiskey-brands/">Read More</a> <!---READ-->
+             </div>
+          </div>
+          <div class="rights"><!--RIGHT PART HOME PAGE---->
+             <img src="Assets/na-whiskeys-1536x896.jpg" alt="">
+          </div>
+        </div>
+    </section>
+    
+    <!--LIST ALL PRODUCTS--->
+     <section class="section_1" id="product">
+        <div class="content_container">
+        </div>
+     </section>
+
+     <!---HOME PAGE ABOUT US---->
+    <section class="page">
+        <div class="page_wrapper">
+            <div class="left_card"> <!--LEFT PART---->
+               <p>“The modern gentleman is not the final stage in Darwin’s evolutionary process. A true gentleman should always be looking to enrich himself further through experience, self-improvement and the enjoyment of quality, whilst keeping an eye on value. And perhaps most importantly, we must remember that a true gentleman is one who puts more into the world than he takes out.”</p>
+               <a class="btn" href="about.html">ABOUT APE TO GENTELMEN</a>
+            </div>
+            <div class="right_card"><!--RIGHT PART--->
+                <img src="Assets/homepage/Gentleman-720x864.jpg" alt="">
+            </div>
+        </div>
+    </section> 
+</section>
+    
+    <!----Page2-->
+<section class="page-2">
+    <section class="page-2-1">
+        <div class="composition">
+           <h4>COMPOSITION & CARE</h4>
+           <h4>COMPOSTION</h4>
+           <p>We work with monitoring program to quarantee compliance with
+            social,environmental, and health and safety satndard of our products.
+            TO assess its compliance, we have developed an audit
+           </p>
+        </div>
+
+        <div class="images_product">
+           <img src="Assets/shoppage/4302305800_2_1_1.jpg" alt="" id="photo">
+        </div>
+
+        <div class="description_product">
+          <h3 id="name">DOWN PUFFER JACKET</h3>
+          <p id="price">169.00USD</p>
+          <p id="description">Puffer jacket with down fill. Made of technical fabric with shiny finish. 
+            High collar with adjustable hood and long sleeves with elastic cuffs. Welt 
+            pockets at hip and interior pocket. Adjustable hem with side elastics
+          </p>
+          <p>CHECK IN-STORE AVAILABILITY</p>
+          <p>SHIPPING, EXCHANGES AND RETURNES</p>
+
+          <div class="type">
+            <h3>BLACK |2222/415</h3>
+            <div class="size"></div>
+          </div>
+        </div>
+      </section>
+  <img src="./Assets/" alt="">
+
+      <section class="images">
+        <img src="Assets/shoppage/4302305800_2_4_1.jpg" alt=""></div>
+        <img src="Assets/shoppage/4302305800_1_1_1.jpg" alt=""></div>
+        <img src="Assets/shoppage/4302305800_2_2_1.jpg" alt=""></div>
+        <img src="Assets/shoppage/4302305800_2_3_1.jpg" alt=""></div>
+      </section>
+      <div class="content_containers"></div>
+</section>
+
+
+<!--PAGE-3 ABOUT---->
+<section class="page-3">
+    <h1 class="top-title">About Daniyal</h1>
+
+    <div class="content_about">
+       <div class="left">
+           <h4>CRAFT</h4>
+           <h2>Thoughtful and Considered</h2>
+           <p>Eveything we create is dessigned to tangibilty improve your rest.</p>
+           <p>No-reide up waisbands, strategies ventilation, stay-put sleeves,no twist straps... OH
+               ,and pockets. - these are just some of the rest-centric construction details at the foundation of
+               our brand .We maintain a painstaking attetion to detail, quality, and construction because we belive 
+               you deserve to feel good, in and out of bed,We are the anti "old t-shirt"-we are the uniform 
+               for those who share our belief  that most important part of the day.
+           </p>
+       </div>
+       <div class="right">
+           <img src="Assets/aboutpage/old-money-ralph-lauren-900x630.jpg" alt="">
+       </div>
+    </div>
+
+    <div class="description">
+       <h1>Daniyal Introduction</h1>
+       <p>Welcome to Daniyal, the online evolition of a tradional men`s magazine,
+           dedicated to timeless yet contemorary style,intelligent living,and value.
+           As an insight into our belifes,feel free <a href="">Ten Commandments of Menswear.</a>
+       </p>
+       <img src="Assets/aboutpage/06-07-17-APE-FULL-RES-63.jpg" alt="">
+
+       <h1>History and Journey</h1>
+       <p>Launched in 2009 to meet a need for informative and engaging writing on men’s grooming, the magazine has 
+       evolved in to a resource for men on style, grooming and life. Whether new or old our goal is to present relevant 
+       topics of note to you, the reader.</p>
+       <p>
+           <b>
+               “The modern gentleman is not the final stage in Darwin’s evolutionary process. A true gentleman should 
+               always be looking to enrich himself further through experience, self-improvement and the enjoyment of 
+               quality, whilst keeping an eye on value. And perhaps most importantly, we must remember that a true gentleman 
+               is one who puts more into the world than he takes out.”
+           </b>
+       </p>
+       <p>The modern gentleman comes in many guises, though always with a broad outlook on the world, traversing life with a
+           quiet confidence and always impeccably turned-out. We consider these hallmarks of the modern gent.
+       </p>
+       <img src="Assets/aboutpage/06-07-17-APE-FULL-RES-51.jpg" alt="">
+       <h1>The Daniyal Team Of Expert Journalists</h1>
+       <p>Content is delivered courtesy of a variety of expert journalists. Each well known, experienced and trusted
+       within their specific niche. These include myself, Chris Beastall – Editor and male grooming industry expert. 
+       Reiss Smith and Charlie Thomas – both seasoned Style experts. And Josh Sims writer and published author with numerous, 
+       highly popular Style books. Jessica Punter for Male Grooming, with Jessica being one of the UKs most respected journalists in
+       this category. Jordan Katsianis, digital news editor for Evo Magazine on Cars. We have horology experts Laura McReddie-Doak and 
+       Sam Kessler covering Watches, the former being son of an industry watch legend, and himself a legend in the making. And Paddy 
+       Maddison, an industry revered Style and Grooming expert based in London with his finger on the pulse of what’s happening in the 
+       capital. And finally but certainly not least – Matt Chambers, a brand consultant, educator and judge in the Drinks category.
+       </p>
+       <h1>Daniyal's Promise</h1>
+       <p>Our aim is to deliver well-researched, considered and timely men’s lifestyle content – with journalistic integrity. 
+           Daniyal is all about helping, helping our readers understand topics with greater depth through an experts eyes. 
+           Our focus is on value – be it affordable or more costly, we’ll always recommend style and items of quality, longevity 
+           and value for money. Where we work with brands on a commercial basis – we promise to let you know in the content, \
+           and rest assured, we only work with brands that meet our promise.
+       </p>
+
+       <p>Your feedback is always welcome, please use our contact page to get in touch.</p>
+       <p>Words by <a href="">Orunbek Daniyal</a> - Editor at <a href="">Daniyal</a></p>
+    </div>
+
+ </section>
+
+
+ <!---PAGE-4-CONTACT------>
+ <section class="page-4">
+ <div class="page-4_wrapper">
+ <div class="contact-map">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26800.895394435018!2d71.33814396930319!3d42.896677801718184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38a71d2e510af5ab%3A0xe89f1b55e7c46cd!2sMart!5e0!3m2!1sru!2skz!4v1699683546126!5m2!1sru!2skz" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ </div>
+ <div class="contact-form">
+  <h1>Contact Us</h1>
+  <form action="">
+     <input type="text" placeholder="Name" class="contact-form-txt" id="context-from-name">
+     <input type="email" placeholder="Email" class="contact-form-txt" id="context-form-email">
+     <textarea placeholder="Meassgae" class="contact-form-txtarea"></textarea>
+     <input class="contact-form-btn" value="Submit">
+  </form>
+ </div>
+ </div>
+</section>
+
+ <!--FOOTER-->
+    <section class="footer">
+        <img src="Assets/homepage/footer-desert-desktop.jpg" alt="">
+        <div class="container_footer">
+        <div class="form">
+            <h2>Subscribe to our newsletter</h2>
+            <div><input type="text" placeholder="FULL NAME" id="fullname"></div>
+            <div><input type="email" placeholder="EMAIL ADDRESS" id="emailadress"></div>
+            <button class="submit-ftr">SUBMIT</button>
+        </div>
+    </div>
+    </section>
+    <section class="footer_content"> 
+         <div class="footer_wrapper">
+            <div class="social">
+                <div class="header_footer"><h2>Daniyal</h2></div>
+                <ul class="icons">
+                    <li><a href="https://www.instagram.com/d0niiel/"><img src="Assets/instagram.png" alt="" width="30px"></a></li>
+                    <li><a href=""><img src="Assets/facebook.png" alt="" width="30px"></a></li>
+                    <li><a href=""><img src="Assets/twitter.png" alt="" width="30px"></a></li>
+                </ul>
+            </div>
+            <ul class="links">
+                <li><a href="index.html">MEN'S FASHION</a></li>
+                <li><a href="https://www.apetogentleman.com/category/grooming/">MEN'S GROOMING</a></li>
+                <li><a href="https://www.apetogentleman.com/category/fashion/">MEN'S STYLE</a></li>
+                <li><a href="https://www.apetogentleman.com/category/fashion/outfits-for-men/">OUTFITS FOR MEN</a></li>
+                <li><a href="https://www.apetogentleman.com/category/fashion/mens-clothing-brands/">MEN'S CLOOTHING BRANDS</a></li>
+                <li><a href="https://www.apetogentleman.com/category/mens-hairstyles/">MEN'S HAIRSTYLES</a></li>
+                <li><a href="https://www.apetogentleman.com/category/watches/">MEN'S WATCHES</a></li>
+            </ul>
+            <div class="end">
+                <div>© ORYNBEK DANIYAL 2023</div>
+                <div class="texts">
+                    <p>PRIVACY POLICY</p>
+                    <p>ADVERSITE</p>
+                </div>
+
+            </div>
+         </div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

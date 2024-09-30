@@ -1,0 +1,849 @@
+/* @define form */
+.form {
+	max-width: 860px;
+}
+
+.form--one-column {
+	max-width: auto;
+}
+
+.form__fields {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.form__column {
+	box-sizing: border-box;
+	display: flex;
+	position: relative;
+	width: 100%;
+}
+
+[dir] .form__column {
+	margin-bottom: var(--spacing-02);
+}
+
+[dir] .form__column--empty {
+	margin-bottom: 0;
+}
+
+[dir=ltr] .form__column--composite .form-input:not(:last-child) {
+	padding-right: var(--spacing-03);
+}
+
+[dir=rtl] .form__column--composite .form-input:not(:last-child) {
+	padding-left: var(--spacing-03);
+}
+
+.form__column-legend {
+	color: var(--color-main-060);
+	font-size: var(--font-size-body-m-highlight);
+	position: absolute;
+	top: var(--form-input-label-padding-top);
+	/* stylelint-disable-next-line property-no-vendor-prefix, order/properties-alphabetical-order */
+	-ms-transform: translateY(-16px) scale(0.8);
+	line-height: var(--line-height-body-m-highlight);
+	letter-spacing: var(--letter-spacing-body-m-highlight);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-medium);
+}
+
+[dir] .form__column-legend {
+	transform: var(--form-input-label-transform);
+}
+
+[dir=ltr] .form__column-legend {
+	left: 0;
+	transform-origin: left;
+}
+
+[dir=rtl] .form__column-legend {
+	right: 0;
+	transform-origin: right;
+}
+
+.form__column-subcolumn {
+	display: flex;
+	width: 100%;
+}
+
+[dir=ltr] .form__column-subcolumn .form-input-label__label, [dir=ltr] .form__column-subcolumn .zds-input-base__label {
+	left: -9999px;
+}
+
+[dir=rtl] .form__column-subcolumn .form-input-label__label, [dir=rtl] .form__column-subcolumn .zds-input-base__label {
+	right: -9999px;
+}
+
+.form__hidden-submit {
+	display: none;
+}
+
+[dir] .form__footer {
+	margin-top: var(--spacing-08);
+}
+
+@media screen and (min-width: 768px) {
+	.form__column {
+		width: 50%;
+	}
+	[dir=ltr] .form__column {
+		padding-right: var(--spacing-06);
+	}
+	[dir=rtl] .form__column {
+		padding-left: var(--spacing-06);
+	}
+
+	.form--one-column .form__column {
+		width: 100%;
+	}
+
+	[dir=ltr] .form--one-column .form__column {
+		padding-right: 0;
+	}
+
+	[dir=rtl] .form--one-column .form__column {
+		padding-left: 0;
+	}
+
+	.form--two-column .form__footer {
+		width: 50%;
+	}
+
+	[dir=ltr] .form--two-column .form__footer {
+		padding-right: var(--spacing-06);
+	}
+
+	[dir=rtl] .form--two-column .form__footer {
+		padding-left: var(--spacing-06);
+	}
+
+	.form__footer > .zds-button {
+		min-width: 192px;
+	}
+
+	/* stylelint-disable-next-line selector-max-compound-selectors */
+	.form--one-column .form__footer > .zds-button {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.layout .form__column-legend {
+		display: none;
+	}
+}
+
+.form-input-error {
+	--form-input-error-icon-size: var(--line-height-paragraph-s);
+
+	align-items: flex-start;
+	color: var(--color-semantic-danger-high);
+	display: flex;
+	fill: var(--color-semantic-danger-high);
+	font-size: var(--font-size-paragraph-s);
+	line-height: var(--line-height-paragraph-s);
+	letter-spacing: var(--letter-spacing-paragraph-s);
+	text-transform: none;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+.form-input-error .form-input-error__icon {
+	flex-shrink: 0;
+	height: var(--form-input-error-icon-size);
+	width: var(--form-input-error-icon-size);
+}
+
+[dir=ltr] .form-input-error .form-input-error__icon {
+	margin-right: var(--spacing-01);
+}
+
+[dir=rtl] .form-input-error .form-input-error__icon {
+	margin-left: var(--spacing-01);
+}
+
+@media screen and (min-width: 1280px) {
+	.form-input-error .form-input-error__icon {
+		--form-input-error-icon-size: 16px;
+	}
+}
+
+.form-input-help {
+	--form-input-help-icon-size: var(--line-height-paragraph-s);
+
+	align-items: flex-start;
+	display: flex;
+	font-size: var(--font-size-paragraph-s);
+	line-height: var(--line-height-paragraph-s);
+	letter-spacing: var(--letter-spacing-paragraph-s);
+	text-transform: none;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+.form-input-help .form-input-help__wrap {
+	display: flex;
+}
+
+.form-input-help .form-input-help__icon {
+	flex-shrink: 0;
+	height: var(--form-input-help-icon-size);
+	width: var(--form-input-help-icon-size);
+}
+
+[dir=ltr] .form-input-help .form-input-help__icon {
+	margin-right: var(--spacing-01);
+}
+
+[dir=rtl] .form-input-help .form-input-help__icon {
+	margin-left: var(--spacing-01);
+}
+
+@media screen and (min-width: 1280px) {
+	.form-input-help .form-input-help__icon {
+		--form-input-help-icon-size: 16px;
+	}
+}
+
+/** @define form-input-text */
+.form-input-text__input {
+	width: 100%;
+}
+
+/* @define form-input-label */
+:root {
+	--form-input-label-border-color-unfocused: var(--color-content-mid);
+	--form-input-label-padding-top: 24px;
+	--form-input-label-transform: translateY(calc(-1 * var(--spacing-04))) scale(0.8);
+}
+
+.form-input-label {
+	box-sizing: border-box;
+	display: inline-block; /* UX requirement */
+	position: relative;
+	width: 100%;
+}
+
+[dir] .form-input-label {
+	border-bottom: 1px solid var(--form-input-label-border-color-unfocused);
+	padding-bottom: 0.5px;
+	padding-top: var(--form-input-label-padding-top);
+}
+
+.form-input-label__label {
+	font-size: var(--font-size-heading-s);
+	overflow: hidden;
+	position: absolute;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	width: 100%;
+	line-height: var(--line-height-heading-s);
+	letter-spacing: var(--letter-spacing-heading-s);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+[dir] .form-input-label__label {
+	transition-duration: 0.3s;
+}
+
+[dir=ltr] .form-input-label__label {
+	left: 0;
+	transform-origin: left;
+}
+
+[dir=rtl] .form-input-label__label {
+	right: 0;
+	transform-origin: right;
+}
+
+.form-input-label__input {
+	font-size: var(--font-size-paragraph-l);
+	position: relative;
+	/* stylelint-disable-next-line declaration-no-important */
+	text-transform: none !important;
+	z-index: 1;
+	line-height: var(--line-height-paragraph-l);
+	letter-spacing: var(--letter-spacing-paragraph-l);
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+.form-input-label__input::-ms-input-placeholder {
+	color: var(--color-content-mid);
+}
+
+.form-input-label__input::placeholder,
+.form-input-label__label {
+	color: var(--color-content-mid);
+}
+
+/* Do not merge this with blocks above and bellow (ZFRONTST-4544) https://bit.ly/2XmLNig */
+.form-input-label--with-fallback .form-input-label__label {
+	color: var(--color-surface-high-alt);
+}
+[dir] .form-input-label--with-fallback .form-input-label__label {
+	transform: translateY(-16px) scale(0.8);
+}
+
+[dir] .form-input-label--fixed .form-input-label__label, [dir] .form-input-label__input:focus + .form-input-label__label, [dir] .form-input-label__input:not(:placeholder-shown) + .form-input-label__label {
+	transform: var(--form-input-label-transform);
+}
+
+.form-input-label__input:focus {
+	/* stylelint-disable-next-line declaration-no-important */
+	outline: none !important;
+}
+
+[dir] .form-input-label__input:focus {
+	border-color: var(--color-content-high);
+}
+
+/* @define form-input-dropdown */
+.form-input-dropdown {
+	position: relative;
+}
+
+.form-input-dropdown__label {
+	display: inline-block;
+}
+
+.form-input-dropdown__button {
+	color: var(--color-content-high);
+	width: 100%;
+}
+
+[dir=ltr] .form-input-dropdown__button {
+	text-align: left;
+}
+
+[dir=rtl] .form-input-dropdown__button {
+	text-align: right;
+}
+
+.form-input-dropdown__button:disabled {
+	color: var(--color-content-high);
+}
+
+.form-input-dropdown__menu {
+	position: absolute;
+	z-index: 2;
+}
+
+[dir] .form-input-dropdown__menu {
+	background: var(--color-background-base);
+	border: 1px solid var(--color-content-mid);
+	border-top: 0;
+}
+
+.form-input-dropdown__option {
+	font-size: var(--font-size-paragraph-l);
+	line-height: var(--line-height-paragraph-l);
+	letter-spacing: var(--letter-spacing-paragraph-l);
+	text-transform: none;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+[dir] .form-input-dropdown__option {
+	cursor: pointer;
+	padding: var(--spacing-03) var(--spacing-05);
+}
+
+[dir] .form-input-dropdown__option--selected {
+	background: var(--color-main-010);
+}
+
+.form-input-dropdown__arrow {
+	bottom: 5px;
+	fill: var(--color-content-high);
+	height: 12px;
+	position: absolute;
+	width: 12px;
+}
+
+[dir=ltr] .form-input-dropdown__arrow {
+	right: 5px;
+}
+
+[dir=rtl] .form-input-dropdown__arrow {
+	left: 5px;
+}
+
+/** @define form-input-radio */
+:root {
+	--form-input-radio-size: 12px;
+}
+
+.form-input-radio {
+	align-items: center;
+	display: flex;
+}
+
+[dir] .form-input-radio {
+	cursor: pointer;
+}
+
+.form-input-radio__input {
+	position: absolute;
+}
+
+[dir=ltr] .form-input-radio__input {
+	left: -99999px;
+}
+
+[dir=rtl] .form-input-radio__input {
+	right: -99999px;
+}
+
+.form-input-radio__icon {
+	flex: 0 0 var(--form-input-radio-size);
+	height: var(--form-input-radio-size);
+	width: var(--form-input-radio-size);
+}
+
+[dir] .form-input-radio__icon {
+	border: 1px solid var(--color-content-high);
+	border-radius: 50%;
+}
+
+[dir=ltr] .form-input-radio__icon {
+	margin-right: var(--spacing-02);
+}
+
+[dir=rtl] .form-input-radio__icon {
+	margin-left: var(--spacing-02);
+}
+
+.form-input-radio__label {
+	font-size: var(--font-size-heading-s);
+	line-height: var(--line-height-heading-s);
+	letter-spacing: var(--letter-spacing-heading-s);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+[dir] .form-input-radio:hover .form-input-radio__icon {
+	background: var(--color-background-low);
+}
+
+[dir] .form-input-radio__input:checked + .form-input-radio__icon {
+	background: var(--color-content-high);
+	border: 2px solid var(--color-content-inverse);
+	box-shadow: 0 0 0 1px var(--color-content-high);
+}
+
+/* stylelint-disable-next-line selector-max-compound-selectors */
+.form-input-radio__input:checked + .form-input-radio__icon + .form-input-radio__label {
+	font-size: var(--font-size-heading-s-highlight);
+	line-height: var(--line-height-heading-s-highlight);
+	letter-spacing: var(--letter-spacing-heading-s-highlight);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-medium);
+}
+
+.theme--keyboard-user .form-input-radio__input:focus {
+	outline: none;
+}
+
+/* stylelint-disable-next-line selector-max-compound-selectors */
+[dir] .theme--keyboard-user .form-input-radio__input:focus + .form-input-radio__icon {
+	border-radius: 50%;
+	box-shadow: 0 0 0 var(--theme-focus-outline-width) var(--color-background-low-alt);
+}
+
+@media screen and (min-width: 1920px) {
+	:root {
+		--form-input-radio-size: 15px;
+	}
+}
+
+.form-input-autocomplete__option {
+	color: var(--color-content-high);
+	font-size: var(--font-size-heading-xs-highlight);
+	line-height: var(--line-height-heading-xs-highlight);
+	letter-spacing: var(--letter-spacing-heading-xs-highlight);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-medium);
+}
+
+.form-input-autocomplete__option--vertical-layout {
+	display: flex;
+	flex-flow: column nowrap;
+}
+
+.form-input-autocomplete__option-extra-info {
+	font-size: var(--font-size-body-s);
+	line-height: var(--line-height-body-s);
+	letter-spacing: var(--letter-spacing-body-s);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+.form-input-autocomplete__option--horizontal-layout {
+	display: flex;
+	flex-flow: row nowrap;
+	font-size: var(--font-size-body-l-highlight);
+	line-height: var(--line-height-body-l-highlight);
+	letter-spacing: var(--letter-spacing-body-l-highlight);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-medium);
+}
+
+.form-input-autocomplete__option--horizontal-layout .form-input-autocomplete__option-extra-info {
+	font-size: var(--font-size-body-l);
+	line-height: var(--line-height-body-l);
+	letter-spacing: var(--letter-spacing-body-l);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+[dir=ltr] .form-input-autocomplete__option--horizontal-layout .form-input-autocomplete__option-extra-info {
+	margin-left: var(--spacing-02);
+}
+
+[dir=rtl] .form-input-autocomplete__option--horizontal-layout .form-input-autocomplete__option-extra-info {
+	margin-right: var(--spacing-02);
+}
+
+[dir] .form-input-autocomplete__option--vertical-layout .form-input-autocomplete__option-extra-info {
+	margin-top: var(--spacing-02);
+}
+
+[dir=ltr] .form-input-autocomplete__option--vertical-layout .form-input-autocomplete__option-extra-info {
+	margin-left: var(--spacing-02);
+}
+
+[dir=rtl] .form-input-autocomplete__option--vertical-layout .form-input-autocomplete__option-extra-info {
+	margin-right: var(--spacing-02);
+}
+
+.form-input-autocomplete__menu {
+	min-width: max-content;
+}
+
+.form-input-autocomplete__provider-logo {
+	display: flex;
+	height: 16px;
+	justify-content: flex-end;
+}
+
+[dir] .form-input-autocomplete__provider-logo {
+	margin: var(--spacing-01) var(--spacing-02);
+}
+
+.form-input-autocomplete__provider-logo-img {
+	height: 100%;
+}
+
+.react-datepicker {
+	display: flex;
+}
+
+.react-datepicker-popper {
+	z-index: 2;
+}
+
+[dir] .react-datepicker-popper {
+	background: var(--color-background-base);
+	border: 1px solid var(--color-surface-low-alt);
+	text-align: center;
+}
+
+.react-datepicker__current-month {
+	font-size: var(--font-size-body-m);
+	font-stretch: var(--font-stretch-condensed);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--line-height-body-m);
+	letter-spacing: var(--letter-spacing-body-m);
+	text-transform: uppercase;
+}
+
+[dir] .react-datepicker__current-month {
+	padding-bottom: var(--spacing-02);
+	padding-top: var(--spacing-02);
+}
+
+[dir] .react-datepicker__month-select, [dir] .react-datepicker__year-select {
+	background: var(--color-background-base);
+}
+
+.react-datepicker__navigation {
+	fill: var(--color-content-high);
+	height: 24px;
+	position: absolute;
+	width: 24px;
+}
+
+[dir] .react-datepicker__navigation {
+	cursor: pointer;
+}
+
+.react-datepicker__navigation--previous {
+	top: 6px;
+}
+
+[dir=ltr] .react-datepicker__navigation--previous {
+	left: 4px;
+	transform: rotate(180deg);
+}
+
+[dir=rtl] .react-datepicker__navigation--previous {
+	right: 4px;
+	transform: rotate(-180deg);
+}
+
+.react-datepicker__navigation--next {
+	top: 5px;
+}
+
+[dir=ltr] .react-datepicker__navigation--next {
+	left: 224px;
+}
+
+[dir=rtl] .react-datepicker__navigation--next {
+	right: 224px;
+}
+
+.react-datepicker__day-names,
+.react-datepicker__week {
+	display: table;
+	table-layout: fixed;
+	width: 250px;
+}
+
+.react-datepicker__day-names {
+	font-size: var(--font-size-body-s);
+	font-weight: var(--font-weight-bold);
+	line-height: var(--line-height-body-s);
+	letter-spacing: var(--letter-spacing-body-s);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+}
+
+[dir] .react-datepicker__day-names {
+	padding-bottom: var(--spacing-01);
+}
+
+.react-datepicker__day-name,
+.react-datepicker__day {
+	display: table-cell;
+	font-size: var(--font-size-body-s);
+	line-height: var(--line-height-body-s);
+	letter-spacing: var(--letter-spacing-body-s);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+[dir] .react-datepicker__day-name, [dir] .react-datepicker__day {
+	padding: var(--spacing-01);
+}
+
+[dir] .react-datepicker__day {
+	cursor: pointer;
+}
+
+[dir] .react-datepicker__day--disabled {
+	cursor: not-allowed;
+}
+
+.react-datepicker__day:hover {
+	color: var(--color-content-high);
+}
+
+[dir] .react-datepicker__day:hover {
+	background: var(--color-background-base-alt);
+}
+
+[dir=ltr] .react-datepicker__time-container {
+	border-left: 1px solid var(--color-main-020);
+}
+
+[dir=rtl] .react-datepicker__time-container {
+	border-right: 1px solid var(--color-main-020);
+}
+
+.react-datepicker__time-list {
+	height: 200px;
+	overflow-y: scroll;
+}
+
+.react-datepicker__time-list-item {
+	font-size: var(--font-size-body-s);
+	line-height: var(--line-height-body-s);
+	letter-spacing: var(--letter-spacing-body-s);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+[dir] .react-datepicker__time-list-item {
+	cursor: pointer;
+	padding: var(--spacing-02);
+	text-align: center;
+}
+
+.react-datepicker__day--selected,
+.react-datepicker__time-list-item--selected {
+	font-weight: var(--font-weight-bold);
+}
+
+[dir] .react-datepicker__day--selected, [dir] .react-datepicker__time-list-item--selected {
+	background: var(--color-background-base-alt);
+}
+
+.react-datepicker__day--disabled,
+.react-datepicker__day--outside-month,
+.react-datepicker__time-list-item--disabled {
+	color: var(--color-content-mid);
+}
+
+.react-datepicker__month-dropdown-container {
+	display: inline-block;
+}
+
+[dir=ltr] .react-datepicker__month-dropdown-container {
+	margin-right: var(--spacing-01);
+}
+
+[dir=rtl] .react-datepicker__month-dropdown-container {
+	margin-left: var(--spacing-01);
+}
+
+.react-datepicker__year-dropdown-container {
+	display: inline-block;
+}
+
+/* stylelint-disable-next-line selector-max-type */
+.react-datepicker__header__dropdown--select select {
+	-webkit-appearance: auto;
+	   -moz-appearance: auto;
+	        appearance: auto;
+	font-size: var(--font-size-body-m);
+	line-height: var(--line-height-body-m);
+	letter-spacing: var(--letter-spacing-body-m);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+[dir] .react-datepicker__header__dropdown--select select {
+	border: 1px solid var(--color-surface-low-alt);
+	border-radius: 2px;
+	cursor: pointer;
+	margin-bottom: var(--spacing-03);
+}
+
+.form-input-captcha {
+	align-items: flex-end;
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.form-input-captcha__image {
+	height: 45px;
+}
+
+[dir=ltr] .form-input-captcha__image {
+	margin-left: var(--spacing-04);
+}
+
+[dir=rtl] .form-input-captcha__image {
+	margin-right: var(--spacing-04);
+}
+
+.theme--dark .form-input-captcha__image {
+	filter: invert(1);
+}
+
+/* @define form-input */
+/* stylelint-disable-next-line plugin/selector-bem-pattern, selector-max-type */
+.form-input input::-ms-input-placeholder {
+	color: var(--color-content-mid);
+}
+.form-input input::placeholder {
+	color: var(--color-content-mid);
+}
+
+/* stylelint-disable-next-line plugin/selector-bem-pattern, selector-max-type */
+.form-input input:focus {
+	/* stylelint-disable-next-line declaration-no-important */
+	outline: none !important;
+}
+
+.form-input {
+	color: var(--color-content-high);
+	display: flex;
+	width: 100%;
+}
+
+.form-input__wrapper {
+	width: 100%;
+}
+
+.form-input--is-disabled .form-input-select__input,
+.form-input--is-disabled .form-input-text__input {
+	color: var(--color-content-high);
+}
+
+[dir] .form-input--is-disabled .form-input-label {
+	border-bottom: 0;
+}
+
+[dir] .form-input--is-valid .form-input-label {
+	border-bottom-color: var(--color-content-mid);
+}
+
+[dir] .form-input--has-focus .form-input-label {
+	border-bottom-color: var(--color-content-mid);
+}
+
+[dir] .form-input--has-error:not(.form-input--has-focus) .form-input-label {
+	border-color: var(--color-semantic-danger-high);
+}
+
+[dir] .form-input__slot {
+	margin-top: 4px;
+}
+
+@keyframes focus-zds-input-in {
+	0% {
+		font-size: 16px;
+		opacity: 0;
+	}
+
+	100% {
+		font-size: var(--font-size-paragraph-l);
+		opacity: 1;
+		line-height: var(--line-height-paragraph-l);
+		letter-spacing: var(--letter-spacing-paragraph-l);
+		text-transform: none;
+		font-stretch: var(--font-stretch-normal);
+		font-weight: var(--font-weight-light);
+	}
+}
+
+/*
+	Hack to prevent zooming in Safari due to having non-accessible font sizes,
+	smaller than 16px.
+*/
+/* stylelint-disable */
+[dir=ltr] .form-input__wrapper input[type='text']:focus, [dir=ltr] .form-input__wrapper input[type='password']:focus, [dir=ltr] .form-input__wrapper input[type='tel']:focus, [dir=ltr] .form-input__wrapper textarea:focus {
+	animation-duration: 0.01s;
+	animation-name: focus-zds-input-in;
+}
+[dir=rtl] .form-input__wrapper input[type='text']:focus, [dir=rtl] .form-input__wrapper input[type='password']:focus, [dir=rtl] .form-input__wrapper input[type='tel']:focus, [dir=rtl] .form-input__wrapper textarea:focus {
+	animation-duration: 0.01s;
+	animation-name: focus-zds-input-in;
+}
+/* stylelint-enable */
+

@@ -1,0 +1,147 @@
+.loader {
+	bottom: 0;
+	position: fixed;
+	top: 0;
+	z-index: 351;
+}[dir=ltr] .loader {
+	left: 0;
+	right: 0;
+}[dir=rtl] .loader {
+	right: 0;
+	left: 0;
+}
+
+.loader__content {
+	font-size: var(--font-size-body-l);
+	max-width: 80%;
+	min-height: 110px;
+	position: absolute;
+	top: 50%;
+	width: 320px;
+	z-index: 15;
+	line-height: var(--line-height-body-l);
+	letter-spacing: var(--letter-spacing-body-l);
+	text-transform: uppercase;
+	font-stretch: var(--font-stretch-normal);
+	font-weight: var(--font-weight-light);
+}
+
+[dir] .loader__content {
+	background-color: var(--color-main-000);
+	border: 1px solid var(--color-main-020);
+	margin-top: 0;
+	padding: 20px;
+	transform: translateY(-50%);
+}
+
+[dir=ltr] .loader__content {
+	left: 0;
+	margin-left: auto;
+	margin-right: auto;
+	right: 0;
+}
+
+[dir=rtl] .loader__content {
+	right: 0;
+	margin-right: auto;
+	margin-left: auto;
+	left: 0;
+}
+
+[dir] .loader__title {
+	margin: 25px 25px 20px 25px;
+	text-align: center;
+}
+
+.loader__overlay {
+	bottom: 0;
+	opacity: 0.5;
+	position: fixed;
+	top: 0;
+	z-index: 10;
+}
+
+[dir] .loader__overlay {
+	background-color: var(--color-main-000);
+}
+
+[dir=ltr] .loader__overlay {
+	left: 0;
+	right: 0;
+}
+
+[dir=rtl] .loader__overlay {
+	right: 0;
+	left: 0;
+}
+
+.loader__icon {
+	box-sizing: border-box;
+	content: '';
+	height: 20px;
+	position: relative;
+	width: 20px;
+}
+
+[dir] .loader__icon {
+	border: 2px solid var(--color-main-020);
+	border-radius: 50%;
+	border-top-color: var(--color-main-080);
+	margin-top: 10px;
+}
+
+[dir=ltr] .loader__icon {
+	animation:  loader-spinner-ltr 0.7s linear infinite;
+	border-left-color: var(--color-main-080);
+	left: 50%;
+	margin-left: -10px;
+}
+
+[dir=rtl] .loader__icon {
+	animation:  loader-spinner-rtl 0.7s linear infinite;
+	border-right-color: var(--color-main-080);
+	right: 50%;
+	margin-right: -10px;
+}
+
+@keyframes loader-spinner-ltr {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes loader-spinner-rtl {
+	to {
+		transform: rotate(-360deg);
+	}
+}
+
+.loader--basic {
+	position: fixed;
+	top: 48px;
+	z-index: 11;
+}
+
+[dir=ltr] .loader--basic {
+	right: 20px;
+}
+
+[dir=rtl] .loader--basic {
+	left: 20px;
+}
+
+@media screen and (min-width: 768px) {
+	.loader--basic {
+		top: 90px;
+	}
+
+	.loader__content {
+		top: 0;
+	}
+
+	[dir] .loader__content {
+		margin-top: 15%;
+		transform: none;
+	}
+}
+
